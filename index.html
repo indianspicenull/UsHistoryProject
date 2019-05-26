@@ -126,6 +126,22 @@
       $(this).html('Click');
     });
   });
+
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+
 </script>    
 <div data-aos="fade-up">
 <a href = "#Slide" class="gradient-button gradient-button-1">Home</a><br /></center>
@@ -196,16 +212,16 @@
                 <img data-u="image" src="image/005.png" />
             </div>
             <div>
-                <img data-u="image" src="image/006.jpg" />
+                <img data-u="image" src="image/006.png" />
             </div>
             <div>
-                <img data-u="image" src="image/007.jpg" />
+                <img data-u="image" src="image/007.png" />
             </div>
             <div>
-                <img data-u="image" src="image/008.jpg" />
+                <img data-u="image" src="image/008.png" />
             </div>
             <div>
-                <img data-u="image" src="image/001.png" />
+                <img data-u="image" src="image/009.png" />
             </div>
             <div>
                 <img data-u="image" src="image/001.png" />
